@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import getPhotos from "../api/services/Photo";
-import { getToken, setToken } from "../redux/actions/tokenAction";
+import { getPhotoList } from "../redux/actions/PhotoAction";
 
 
-// Hook
+// Hook for getting photos from API, send them to redux and comeback as value
 function usePhotoStatus() {
-    const [hookPhoto, setHookPhoto] = useState();
 
     const dispatch = useDispatch();
 
@@ -14,12 +12,12 @@ function usePhotoStatus() {
 
     useEffect(() => {
         function setPhotos() {
-            dispatch(getToken());
+            dispatch(getPhotoList());
         }
         setPhotos()
     }, [dispatch])
 
-    return photos
+    return photos;
 }
 
 export default usePhotoStatus;

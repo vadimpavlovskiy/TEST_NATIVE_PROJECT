@@ -1,12 +1,12 @@
-import { GET_TOKEN } from "../constants";
+import { GET_PHOTO_LIST } from "../constants";
 
 const INITIAL_STATE = {
     photos: null,
 }
 
-const TokenReducer = (state = INITIAL_STATE, action) => {
+const PhotoReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case GET_TOKEN:
+        case GET_PHOTO_LIST:
             return {
                 ...state,
                 photos: action.payload,
@@ -15,4 +15,4 @@ const TokenReducer = (state = INITIAL_STATE, action) => {
             return state;
     }
 }
-export default TokenReducer;
+export default PhotoReducer;

@@ -1,10 +1,10 @@
 import { combineReducers, legacy_createStore } from 'redux';
 
-import TokenReducer from '../reducers/tokenReducer';
+import PhotoReducer from '../reducers/PhotoReducer';
 
 import { applyMiddleware } from 'redux';
 
-import thunk, { ThunkMiddleware } from 'redux-thunk';
+import thunk from 'redux-thunk';
 
 import logger from 'redux-logger';
 import { compose } from 'redux';
@@ -18,7 +18,7 @@ const enhancer = composeEnhancers(
 )
 
 const rootReducer = combineReducers(
-    { photos: TokenReducer }
+    { photos: PhotoReducer }
 )
 
 const configureStore = () => {

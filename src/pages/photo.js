@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, Button } from 'react-native';
-import SinglePhoto from "../layouts/SinglePhoto.layout";
+import { View } from 'react-native';
+import SinglePhoto from '../layouts/SinglePhoto.layout';
 
 const DetailsScreen = ({ navigation, route }) => {
     return (

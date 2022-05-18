@@ -5,7 +5,8 @@ import { View, Image, Text, TouchableOpacity } from 'react-native';
 
 import { PhotoItemStyles } from "../../styles/component-styles/PhotoItem.styles";
 
-const ImageItem = ({ photoUrl, userName, navigation }) => {
+const ImageItem = ({ photoUrl, userName }) => {
+    // Navigation hook
     const nav = useNavigation();
     return (
         <View style={PhotoItemStyles.photoItem}>
